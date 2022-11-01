@@ -5,7 +5,9 @@ let obj = {
 };
 function removeNumberValues(obj) {
     // your code here
-    
+    for(elemento in obj)
+        if(!isNaN(obj[elemento]))
+            delete obj[elemento];    
 }
 
 removeNumberValues(obj);

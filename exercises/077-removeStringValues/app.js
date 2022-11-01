@@ -5,7 +5,9 @@ let obj = {
 
 function removeStringValues(obj) {
     // your code here
-    
+    for(elemento in obj)
+        if(typeof obj[elemento] == "string")
+            delete obj[elemento];
 }
 
 removeStringValues(obj);
