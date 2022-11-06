@@ -1,12 +1,14 @@
 // Write your function here
 function select(arr, obj){
-  let miObj = arr.filter(valorArray => {
-    for(elemento in obj){
+  let miObj = [];
+
+  for(elemento in obj){
+    arr.forEach(valorArray => {
       console.log(elemento , valorArray);
-      if (elemento == valorArray) return true;
-      else                        return false;
-    }
-  });
+      if (elemento == valorArray) miObj[valorArray] = obj[elemento];
+    });
+  }
+
   return miObj;
 }
 
