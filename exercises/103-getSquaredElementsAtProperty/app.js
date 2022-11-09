@@ -3,7 +3,9 @@ let obj = {
 };
 
 function getSquaredElementsAtProperty(obj, key) {
-    // your code here
+    return obj.key.map((elemento)=>{
+      return (elemento*elemento);
+    });
 }
 
 let output = getSquaredElementsAtProperty(obj, 'key');
