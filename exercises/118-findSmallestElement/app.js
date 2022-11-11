@@ -1,5 +1,13 @@
 function findSmallestElement(arr) {
     // your code here
+    let menor = 9999999;
+
+    arr.forEach(elemento => {
+        if (menor > elemento) {
+            menor = elemento;
+        }
+    });
+    return menor;
 
 }
 
