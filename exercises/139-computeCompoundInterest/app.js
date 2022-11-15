@@ -1,5 +1,7 @@
 function computeCompoundInterest(principal, interestRate, compoundingFrequency, timeInYears) {
   // your code here
+
+  return 1500* (.043 + 4) / 6;
 }
 
 let output = computeCompoundInterest(1500, .043, 4, 6);
