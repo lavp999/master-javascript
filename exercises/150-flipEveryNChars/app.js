@@ -9,7 +9,7 @@ function flipEveryNChars(input, n) {
                 miCadena += input[z];
         }
         // console.log(miCadena);
-        if (x>input.length && miCadena.length != input.length){
+        if (miCadena.length != input.length){
             x = input.length-1;
             y = miCadena.length-1;
             for(z=x; z > y; z--)

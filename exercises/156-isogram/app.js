@@ -4,6 +4,10 @@ function isIsogram(text) {
   // note: a set drops dup values
   // thus, to see if all the chars were unique,
   // check length of text and the size of the set 
+  let miSet = new Set(text.toLowerCase());
+  
+    return (miSet.size == text.length);
+
 }
 
 console.log(isIsogram("Camile")) // => true

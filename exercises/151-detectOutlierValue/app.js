@@ -1,5 +1,7 @@
 function detectOutlierValue(string) {
     // your code here
+
+    // no lo entiendo
 }
 
 // Third number is odd, while the rest of the numbers are even
