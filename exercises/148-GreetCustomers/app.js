@@ -19,10 +19,10 @@ function greetCustomer(firstName) {
   let veces = 0;
 
   for (const propiedad in customerData) {
-
-    if(firstName = propiedad)  veces = customerData[propiedad]["visits"];
-    console.log(firstName, propiedad, veces);
+    if(firstName == propiedad)
+        veces = customerData[propiedad]["visits"];
   }
+
   if (veces == 0){
     greeting = 'Welcome! Is this your first time?';
   }else if (veces == 1){
