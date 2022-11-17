@@ -14,4 +14,5 @@ function isRotated(str1, str2) {
 }
 
 console.log(isRotated('hello world', 'orldhello w')) // => true
+console.log(isRotated('hello world', 'rldhello wo')) // => true
 console.log(isRotated('hello world', 'omrel wp')) // => false
