@@ -23,12 +23,9 @@ function renderInventory(inventory) {
     // it's a good idea to sketch out a skeleton like you've been seeing earlier in this module...
     let miArray = [];
 
-        inventory.forEach((disenador, indDis) => {
-            miArray.push([]);
+    inventory.forEach((disenador, indDis) => {
             disenador.shoes.forEach((detalle, index) => {
-                console.log(detalle);
-                miArray[indDis].push(disenador.name);
-                miArray[indDis] = miArray[indDis].concat(Object.values(detalle));
+                miArray.push([disenador.name].concat(Object.values(detalle)));
             });
         });
 
@@ -36,5 +33,5 @@ function renderInventory(inventory) {
 }
 
 console.log("-----------------------------------------------------")
-console.log(renderInventory(currentInventory))
+console.log("mi array", renderInventory(currentInventory))
 console.log("-----------------------------------------------------")
