@@ -21,6 +21,20 @@ function renderInventory(inventory) {
     // your code here
     // hint: before you just dive into coding...
     // it's a good idea to sketch out a skeleton like you've been seeing earlier in this module...
-    
+    let miArray = [];
+
+        inventory.forEach((disenador, indDis) => {
+            miArray.push([]);
+            disenador.shoes.forEach((detalle, index) => {
+                console.log(detalle);
+                miArray[indDis].push(disenador.name);
+                miArray[indDis] = miArray[indDis].concat(Object.values(detalle));
+            });
+        });
+
+    return miArray;
 }
+
+console.log("-----------------------------------------------------")
 console.log(renderInventory(currentInventory))
+console.log("-----------------------------------------------------")
