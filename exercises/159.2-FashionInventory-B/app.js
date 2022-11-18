@@ -22,22 +22,24 @@ function renderAverageCostPerDesigner(inventory) {
     let miArray = [];
     let diseAnterior = inventory[0].name;
     let suma = 0;
-    let cont = 1;
+    let cont = 0;
 
       inventory.forEach((disenadores, indDis) => {
           disenadores.shoes.forEach((zapatos, index) => {
-              console.log(disenadores.name, ' - ', zapatos.price, ' - ',diseAnterior);
               if (disenadores.name != diseAnterior){
-                  // miArray.push({"name": diseAnterior, "averagePrice" : suma/cont});
-                  suma = 0;
+                  miArray.push({"name": diseAnterior, "suma" : suma, "unidades" : cont, "averagePrice" : suma/cont});
+                  diseAnterior = disenadores.name;
+                  suma = zapatos.price;
                   cont = 1;
               }else{
                  suma += zapatos.price;
-                  cont += 1;
+                 cont += 1;
               }
-              diseAnterior = disenadores.name;
           });
       });
+
+      // el último se no graba
+      miArray.push({"name": diseAnterior, "suma" : suma, "unidades" : cont, "averagePrice" : suma/cont});
 
     return miArray;
 
