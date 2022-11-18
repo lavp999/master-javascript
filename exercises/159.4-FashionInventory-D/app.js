@@ -19,4 +19,18 @@ let inventory = [
 
 function getLaceNameDataForShoes(inventory) {
     // your code here
+    let miArray = [];
+
+    inventory.forEach((disenador, indDis) => {
+        disenador.shoes.forEach((detalle, index) => {
+            miArray.push({"nameWords": Object.values(detalle), "targetWordIndex": 2});
+        });
+    });
+
+    return miArray;
 }
+
+console.log("-----------------------------------------------------")
+console.log("mi array", getLaceNameDataForShoes(inventory))
+console.log("-----------------------------------------------------")
+
