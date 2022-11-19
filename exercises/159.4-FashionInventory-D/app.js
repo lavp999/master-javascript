@@ -21,19 +21,17 @@ function getLaceNameDataForShoes(inventory) {
     // your code here
     let miArray = [];
     let palabras = [];
-    let pos = 0; // posicion de la palabra mas larga
-    let len = 0; // Auxiliar para controlar la longitud
 
     inventory.forEach((disenador, indDis) => {
-        disenador.shoes.forEach((detalle, index) => {
-            palabras = Object.values(detalle);
-            palabras.array.forEach((palabra, x) => {
-                if (palabra.length > len){
-                    len = palabra.length;
-                    por = x;
-                }
-            });
-            miArray.push({"nameWords": palabras, "targetWordIndex": pos});
+        disenador.shoes.forEach((shoes, index) => {
+            if (shoes.name.indexOf("lace") != -1){
+              palabras = shoes.name.split(' ');
+              palabras.forEach((palabra, indice) => {
+                console.log(palabra);
+                if (palabra.indexOf("lace") != -1)
+                    miArray.push({"nameWords": palabras, "targetWordIndex": indice});
+              });
+            }
         });
     });
 
